@@ -36,8 +36,9 @@ export function SiteFooter() {
     <footer className="bg-foreground text-white">
       <div className="shell pt-10 pb-8 sm:pt-14 sm:pb-10 lg:pt-16 lg:pb-12">
         <div className="grid gap-8 sm:grid-cols-2 sm:gap-10 lg:grid-cols-[1.4fr_1fr_1fr_1fr] lg:gap-12">
-          {/* Brand column */}
-          <div className="sm:col-span-2 lg:col-span-1">
+
+          {/* Brand column — centred on mobile, left-aligned from sm: */}
+          <div className="flex flex-col items-center text-center sm:col-span-2 sm:items-start sm:text-left lg:col-span-1">
             <div className="flex items-center gap-3">
               <Image
                 src="/images/placeholders/logo.png"
@@ -55,22 +56,22 @@ export function SiteFooter() {
 
             {/* Contact */}
             <div className="mt-6 space-y-2.5 text-sm text-white/75">
-              <a href="tel:+263788064458" className="flex items-center gap-2 hover:text-white transition-colors">
+              <a href="tel:+263788064458" className="flex items-center justify-center gap-2 hover:text-white transition-colors sm:justify-start">
                 <Phone className="h-3.5 w-3.5 shrink-0 text-white/50" />
                 +263 78 806 4458
               </a>
-              <a href="mailto:bookings@starsuitlodges.com" className="flex items-center gap-2 hover:text-white transition-colors">
+              <a href="mailto:bookings@starsuitlodges.com" className="flex items-center justify-center gap-2 hover:text-white transition-colors sm:justify-start">
                 <Mail className="h-3.5 w-3.5 shrink-0 text-white/50" />
                 bookings@starsuitlodges.com
               </a>
-              <p className="flex items-start gap-2">
-                <MapPin className="mt-0.5 h-3.5 w-3.5 shrink-0 text-white/50" />
-                Mutare & Chipinge, Zimbabwe
+              <p className="flex items-center justify-center gap-2 sm:justify-start">
+                <MapPin className="h-3.5 w-3.5 shrink-0 text-white/50" />
+                Mutare &amp; Chipinge, Zimbabwe
               </p>
             </div>
 
             {/* Social */}
-            <div className="mt-6 flex gap-3">
+            <div className="mt-6 flex justify-center gap-3 sm:justify-start">
               {socialLinks.map(({ icon: Icon, label, href }) => (
                 <a
                   key={label}
@@ -86,9 +87,9 @@ export function SiteFooter() {
             </div>
           </div>
 
-          {/* Link columns */}
+          {/* Link columns — centred on mobile, left-aligned from sm: */}
           {Object.entries(footerLinks).map(([heading, links]) => (
-            <div key={heading}>
+            <div key={heading} className="text-center sm:text-left">
               <p className="text-xs font-semibold uppercase tracking-[0.22em] text-white/50">
                 {heading}
               </p>
@@ -108,8 +109,8 @@ export function SiteFooter() {
           ))}
         </div>
 
-        {/* Check-in info bar */}
-        <div className="mt-12 grid gap-4 rounded-2xl bg-white/6 px-6 py-5 sm:grid-cols-3">
+        {/* Check-in info bar — centred on mobile */}
+        <div className="mt-10 grid gap-4 rounded-2xl bg-white/6 px-6 py-5 text-center sm:mt-12 sm:grid-cols-3 sm:text-left">
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.18em] text-white/50">Check-in</p>
             <p className="mt-1 text-sm font-semibold">From 2:00 PM</p>
@@ -126,7 +127,7 @@ export function SiteFooter() {
       </div>
 
       <div className="border-t border-white/10">
-        <div className="shell flex flex-col gap-3 py-5 text-xs text-white/50 sm:flex-row sm:items-center sm:justify-between">
+        <div className="shell flex flex-col items-center gap-3 py-5 text-center text-xs text-white/50 sm:flex-row sm:items-center sm:justify-between sm:text-left">
           <p>© {year} {siteConfig.name}. All rights reserved.</p>
           <div className="flex gap-5">
             <Link href="/about" className="hover:text-white/80 transition-colors">Privacy Policy</Link>

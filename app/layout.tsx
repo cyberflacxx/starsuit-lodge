@@ -32,10 +32,6 @@ export const metadata: Metadata = {
   description:
     "Modern lodge accommodation, room booking, and hospitality services in Mutare and Chipinge.",
   applicationName: siteConfig.name,
-  icons: {
-    icon: "/icons/icon-192.png",
-    apple: "/icons/icon-512.png",
-  },
   keywords: [
     "Starsuit Lodges",
     "Mutare lodge",

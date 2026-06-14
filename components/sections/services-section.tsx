@@ -1,5 +1,6 @@
 "use client";
 
+import React from "react";
 import { motion } from "framer-motion";
 import {
   CarFront,
@@ -11,14 +12,15 @@ import {
 } from "lucide-react";
 import { SERVICES } from "@/lib/constants";
 
-const serviceIcons = {
+const serviceIcons: Record<string, React.ComponentType<{ className?: string }>> = {
   "Comfortable Rooms": ConciergeBell,
   "Secure Parking": Shield,
   "Pickup Support": CarFront,
   "Online Booking": LaptopMinimalCheck,
   "Guest Assistance": HandHelping,
   "Branch Choice": Map,
-} as const;
+  "Two Branch Locations": Map,
+};
 
 export function ServicesSection() {
   return (
@@ -37,7 +39,7 @@ export function ServicesSection() {
 
         <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
           {SERVICES.map((service, index) => {
-            const Icon = serviceIcons[service.title];
+            const Icon = serviceIcons[service.title] ?? ConciergeBell;
 
             return (
               <motion.article

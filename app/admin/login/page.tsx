@@ -29,8 +29,8 @@ export default function AdminLoginPage() {
         </Link>
       </div>
 
-      {/* Centered content */}
-      <div className="relative z-10 flex min-h-screen items-center justify-center px-4 py-20">
+      {/* Offset content lower across screen sizes */}
+      <div className="relative z-10 flex min-h-screen justify-center px-4 pb-20 pt-36 sm:pt-40 lg:pt-44">
         <div className="w-full max-w-md">
           <div className="mb-8 text-center">
             <h1 className="font-display text-2xl font-semibold text-white">

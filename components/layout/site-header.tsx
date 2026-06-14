@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { siteConfig } from "@/lib/site-config";
@@ -12,8 +13,16 @@ export function SiteHeader() {
   return (
     <header className="absolute inset-x-0 top-0 z-50 bg-transparent">
       <div className="shell flex min-h-20 items-center justify-between gap-6">
-        {/* Brand name only — no logo image */}
+        {/* Logo — left aligned */}
         <Link href="/" className="flex items-center gap-3">
+          <Image
+            src="/images/placeholders/logo.png"
+            alt="Starsuit Lodges"
+            width={40}
+            height={40}
+            className="h-10 w-10 shrink-0 rounded-xl object-contain"
+            style={{ width: 40, height: 40 }}
+          />
           <div>
             <p className="font-display text-xl font-semibold leading-none text-white">
               Starsuit Lodges

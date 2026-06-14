@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { Phone, Mail, MapPin, Facebook, Instagram, Twitter } from "lucide-react";
 import { siteConfig } from "@/lib/site-config";
@@ -39,6 +40,14 @@ export function SiteFooter() {
           {/* Brand column — centred on mobile, left-aligned from sm: */}
           <div className="flex flex-col items-center text-center sm:col-span-2 sm:items-start sm:text-left lg:col-span-1">
             <div className="flex items-center gap-3">
+              <Image
+                src="/images/placeholders/logo.png"
+                alt="Starsuit Lodges"
+                width={40}
+                height={40}
+                className="h-10 w-10 shrink-0 rounded-xl object-contain"
+                style={{ width: 40, height: 40 }}
+              />
               <p className="font-display text-xl font-semibold">{siteConfig.name}</p>
             </div>
             <p className="mt-4 max-w-xs text-sm leading-7 text-white/68">

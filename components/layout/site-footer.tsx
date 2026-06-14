@@ -44,7 +44,8 @@ export function SiteFooter() {
                 alt="Starsuit Lodges"
                 width={40}
                 height={40}
-                className="h-10 w-10 rounded-xl object-contain"
+                className="h-10 w-10 shrink-0 rounded-xl object-contain"
+                style={{ width: 40, height: 40 }}
               />
               <p className="font-display text-xl font-semibold">{siteConfig.name}</p>
             </div>

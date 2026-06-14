@@ -33,11 +33,14 @@ export const metadata: Metadata = {
     "Modern lodge accommodation, room booking, and hospitality services in Mutare and Chipinge.",
   applicationName: siteConfig.name,
   manifest: "/manifest.json",
+  icons: {
+    icon: "/icons/icon-192.png",
+    apple: "/icons/icon-512.png",
+  },
   appleWebApp: {
     capable: true,
     statusBarStyle: "black-translucent",
     title: "Starsuit Lodges",
-    startupImage: "/icons/icon-512.png",
   },
   keywords: [
     "Starsuit Lodges",

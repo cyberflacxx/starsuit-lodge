@@ -55,6 +55,7 @@ type PublicBranchSummary = {
   id: string;
   name: string;
   slug: string;
+  publicSlug: string;
   city: string;
   phone: string;
   email: string;
@@ -259,9 +260,34 @@ export async function getActiveBranchSummaries() {
       },
     });
 
-    return branches satisfies PublicBranchSummary[];
+    if (branches.length === 0) {
+      return FALLBACK_BRANCHES.map((branch) => ({
+        id: branch.id,
+        name: branch.name,
+        slug: branch.slug,
+        publicSlug: branch.publicSlug,
+        city: branch.city,
+        phone: branch.phone,
+        email: branch.email,
+        isActive: branch.isActive,
+      })) satisfies PublicBranchSummary[];
+    }
+
+    return branches.map((branch) => ({
+      ...branch,
+      publicSlug: getPublicBranchSlug(branch),
+    })) satisfies PublicBranchSummary[];
   } catch {
-    return [] as PublicBranchSummary[];
+    return FALLBACK_BRANCHES.map((branch) => ({
+      id: branch.id,
+      name: branch.name,
+      slug: branch.slug,
+      publicSlug: branch.publicSlug,
+      city: branch.city,
+      phone: branch.phone,
+      email: branch.email,
+      isActive: branch.isActive,
+    })) satisfies PublicBranchSummary[];
   }
 }
 

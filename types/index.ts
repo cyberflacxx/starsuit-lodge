@@ -94,6 +94,7 @@ export type BranchSummary = {
   id: string;
   name: string;
   slug: string;
+  publicSlug: string;
   city: string;
   phone: string;
   email: string;

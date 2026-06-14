@@ -14,20 +14,20 @@ export function SiteHeader() {
     <header className="absolute inset-x-0 top-0 z-50 bg-transparent">
       <div className="shell flex min-h-20 items-center justify-between gap-6">
         {/* Logo — left aligned */}
-        <Link href="/" className="flex items-center gap-3">
+        <Link href="/" className="flex items-center gap-4">
           <Image
             src="/images/placeholders/logo.png"
             alt="Starsuit Lodges"
-            width={40}
-            height={40}
-            className="h-10 w-10 shrink-0 rounded-xl object-contain"
-            style={{ width: 40, height: 40 }}
+            width={56}
+            height={56}
+            className="h-14 w-14 shrink-0 rounded-2xl object-contain"
+            style={{ width: 56, height: 56 }}
           />
           <div>
-            <p className="font-display text-xl font-semibold leading-none text-white">
+            <p className="font-display text-2xl font-semibold leading-none text-white">
               Starsuit Lodges
             </p>
-            <p className="mt-1 text-xs uppercase tracking-[0.2em] text-white/60">
+            <p className="mt-1 text-sm uppercase tracking-[0.2em] text-white/60">
               Mutare and Chipinge
             </p>
           </div>

@@ -32,16 +32,8 @@ export default function AdminLoginPage() {
       {/* Centered content */}
       <div className="relative z-10 flex min-h-screen items-center justify-center px-4 py-20">
         <div className="w-full max-w-md">
-          {/* Logo + brand */}
-          <div className="mb-8 flex flex-col items-center text-center">
-            <Image
-              src="/images/placeholders/logo.png"
-              alt="Starsuit Lodges"
-              width={64}
-              height={64}
-              className="h-16 w-16 rounded-2xl object-contain"
-            />
-            <h1 className="mt-4 font-display text-2xl font-semibold text-white">
+          <div className="mb-8 text-center">
+            <h1 className="font-display text-2xl font-semibold text-white">
               Starsuit Lodges
             </h1>
             <p className="mt-1 text-sm uppercase tracking-[0.22em] text-white/55">

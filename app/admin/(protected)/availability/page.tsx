@@ -4,6 +4,7 @@ import { AvailabilitySearchForm } from "@/components/booking/availability-search
 import { checkAdminAvailabilityAction } from "@/app/admin/(protected)/availability/actions";
 import { requireAdmin } from "@/lib/auth";
 import { getBranchesForAdmin } from "@/lib/admin/branches";
+import { getPublicBranchSlug } from "@/lib/branch-utils";
 import { getRoomTypesForAdmin } from "@/lib/admin/rooms";
 
 export default async function AdminAvailabilityPage() {
@@ -32,6 +33,7 @@ export default async function AdminAvailabilityPage() {
             id: branch.id,
             name: branch.name,
             slug: branch.slug,
+            publicSlug: getPublicBranchSlug(branch),
             city: branch.city,
             phone: branch.phone,
             email: branch.email,

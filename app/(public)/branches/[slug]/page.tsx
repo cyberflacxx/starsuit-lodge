@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { MapPinned, Phone } from "lucide-react";
+import { BranchMapPanel } from "@/components/public/branch-map-panel";
 import { CtaBand } from "@/components/public/cta-band";
 import { GalleryGrid } from "@/components/public/gallery-grid";
 import { PageHero } from "@/components/public/page-hero";
@@ -62,29 +63,37 @@ export default async function BranchDetailPage({ params }: BranchDetailPageProps
 
       <section className="section-gap bg-white">
         <div className="shell grid gap-10 lg:grid-cols-[0.95fr_1.05fr]">
-          <div className="surface-card px-6 py-7 sm:px-8">
-            <h2 className="text-3xl font-semibold">Branch details</h2>
-            <div className="mt-6 space-y-4 text-sm leading-7 text-muted-foreground sm:text-base">
-              <p className="flex items-start gap-3">
-                <MapPinned className="mt-1 h-4 w-4 shrink-0 text-primary" />
-                <span>{branch.address}</span>
-              </p>
-              <p className="flex items-center gap-3">
-                <Phone className="h-4 w-4 text-primary" />
-                <span>{branch.phone}</span>
-              </p>
-              <p>{branch.email}</p>
+          <div className="space-y-6">
+            <div className="surface-card px-6 py-7 sm:px-8">
+              <h2 className="text-3xl font-semibold">Branch details</h2>
+              <div className="mt-6 space-y-4 text-sm leading-7 text-muted-foreground sm:text-base">
+                <p className="flex items-start gap-3">
+                  <MapPinned className="mt-1 h-4 w-4 shrink-0 text-primary" />
+                  <span>{branch.address}</span>
+                </p>
+                <p className="flex items-center gap-3">
+                  <Phone className="h-4 w-4 text-primary" />
+                  <span>{branch.phone}</span>
+                </p>
+                <p>{branch.email}</p>
+              </div>
+              <div className="mt-6 flex flex-col gap-3 sm:flex-row">
+                <Button asChild>
+                  <Link href={`/booking?branch=${branch.publicSlug}`}>Book This Branch</Link>
+                </Button>
+                <Button asChild variant="outline">
+                  <Link href={branch.mapUrl} target="_blank" rel="noreferrer">
+                    View Map
+                  </Link>
+                </Button>
+              </div>
             </div>
-            <div className="mt-6 flex flex-col gap-3 sm:flex-row">
-              <Button asChild>
-                <Link href={`/booking?branch=${branch.publicSlug}`}>Book This Branch</Link>
-              </Button>
-              <Button asChild variant="outline">
-                <Link href={branch.mapUrl} target="_blank" rel="noreferrer">
-                  View Map
-                </Link>
-              </Button>
-            </div>
+
+            <BranchMapPanel
+              branchName={branch.name}
+              city={branch.city}
+              mapUrl={branch.mapUrl}
+            />
           </div>
 
           <div>

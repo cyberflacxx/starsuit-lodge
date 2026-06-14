@@ -35,7 +35,12 @@ const bookingSteps = [
   },
 ] as const;
 
-export default async function BookingPage() {
+type BookingPageProps = {
+  searchParams: Promise<Record<string, string | string[] | undefined>>;
+};
+
+export default async function BookingPage({ searchParams }: BookingPageProps) {
+  const params = await searchParams;
   const [branches, roomTypes, bookingPolicyBlock, cancellationPolicyBlock] =
     await Promise.all([
     getActiveBranchSummaries(),
@@ -43,6 +48,20 @@ export default async function BookingPage() {
     getContentBlock("booking-policy"),
     getContentBlock("cancellation-policy"),
   ]);
+  const branchParam = typeof params.branch === "string" ? params.branch.toLowerCase() : "";
+  const defaultBranchId =
+    branches.find((branch) => {
+      const slug = branch.slug.toLowerCase();
+      const publicSlug = branch.publicSlug.toLowerCase();
+      const city = branch.city.toLowerCase();
+
+      return (
+        branch.id === branchParam ||
+        slug === branchParam ||
+        publicSlug === branchParam ||
+        city === branchParam
+      );
+    })?.id ?? undefined;
 
   return (
     <>
@@ -77,6 +96,7 @@ export default async function BookingPage() {
                   branches={branches}
                   roomTypes={roomTypes}
                   submitAction={checkAvailabilityAction}
+                  defaultBranchId={defaultBranchId}
                 />
               </div>
             </div>

@@ -13,6 +13,7 @@ type AvailabilitySearchFormProps = {
     formData: FormData,
   ) => Promise<AvailabilitySearchState>;
   lockedBranchId?: string;
+  defaultBranchId?: string;
   showContinueButton?: boolean;
 };
 
@@ -26,6 +27,7 @@ export function AvailabilitySearchForm({
   roomTypes,
   submitAction,
   lockedBranchId,
+  defaultBranchId,
   showContinueButton = true,
 }: AvailabilitySearchFormProps) {
   const [state, formAction, isPending] = useActionState(submitAction, initialState);
@@ -50,7 +52,7 @@ export function AvailabilitySearchForm({
                 <input
                   id="branchId"
                   readOnly
-                  value={lockedBranch.name}
+                  value={lockedBranch.city}
                   className="h-12 w-full cursor-not-allowed rounded-2xl border border-border bg-muted px-4 text-sm text-foreground"
                 />
               </>
@@ -58,13 +60,13 @@ export function AvailabilitySearchForm({
               <select
                 id="branchId"
                 name="branchId"
-                defaultValue=""
+                defaultValue={defaultBranchId ?? ""}
                 className="h-12 w-full rounded-2xl border border-border bg-white px-4 text-sm text-foreground outline-none focus:border-primary focus:ring-4 focus:ring-primary/10"
               >
                 <option value="">Select branch</option>
                 {branches.map((branch) => (
                   <option key={branch.id} value={branch.id}>
-                    {branch.name}
+                    {branch.city}
                   </option>
                 ))}
               </select>

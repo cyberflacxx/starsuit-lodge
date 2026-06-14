@@ -119,8 +119,8 @@ export default async function AboutPage() {
               We are proud to serve business travellers, families, tour groups, and solo adventurers. Every guest matters equally at Starsuit Lodges.
             </p>
           </div>
-          <div className="relative">
-            <div className="relative h-96 overflow-hidden rounded-3xl">
+          <div className="relative pb-8 sm:pb-0">
+            <div className="relative h-64 overflow-hidden rounded-3xl sm:h-80 lg:h-96">
               <Image
                 src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=900&q=80"
                 alt="Starsuit Lodges exterior"
@@ -129,7 +129,7 @@ export default async function AboutPage() {
                 sizes="(max-width: 1024px) 100vw, 50vw"
               />
             </div>
-            <div className="absolute -bottom-6 -left-6 h-48 w-48 overflow-hidden rounded-3xl border-4 border-white shadow-xl">
+            <div className="absolute -bottom-2 -left-2 h-28 w-28 overflow-hidden rounded-2xl border-4 border-white shadow-xl sm:-bottom-4 sm:-left-4 sm:h-36 sm:w-36 lg:-bottom-6 lg:-left-6 lg:h-48 lg:w-48 lg:rounded-3xl">
               <Image
                 src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=400&q=80"
                 alt="Lodge lobby"

@@ -35,8 +35,13 @@ export const metadata: Metadata = {
   manifest: "/manifest.json",
   appleWebApp: {
     capable: true,
-    statusBarStyle: "default",
-    title: "Starsuit",
+    statusBarStyle: "black-translucent",
+    title: "Starsuit Lodges",
+    startupImage: "/icons/icon-512.png",
+  },
+  icons: {
+    icon: "/app/icon.png",
+    apple: "/app/apple-icon.png",
   },
   keywords: [
     "Starsuit Lodges",
@@ -54,6 +59,9 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
   themeColor: "#0B3D91",
 };
 

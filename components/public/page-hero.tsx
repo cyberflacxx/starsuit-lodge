@@ -23,7 +23,7 @@ export function PageHero({ eyebrow, title, description, actions, imageKey }: Pag
   if (imageSrc) {
     return (
       <section className="relative overflow-hidden">
-        <div className="relative h-130 sm:h-155">
+        <div className="relative h-90 sm:h-110 md:h-130 lg:h-145">
           <Image
             src={imageSrc}
             alt={title}
@@ -34,19 +34,19 @@ export function PageHero({ eyebrow, title, description, actions, imageKey }: Pag
           />
           <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(7,26,51,0.82),rgba(7,26,51,0.55))]" />
           <div className="absolute inset-0 flex items-end">
-            <div className="shell pb-14 pt-24">
+            <div className="shell pb-7 pt-20 sm:pb-10 sm:pt-24 md:pb-14">
               <div className="max-w-4xl text-white">
                 <span className="inline-flex items-center rounded-full border border-white/20 bg-white/12 px-3 py-1 text-xs font-semibold uppercase tracking-[0.24em] text-white/85">
                   {eyebrow}
                 </span>
-                <h1 className="mt-5 text-4xl font-semibold leading-[1.15] sm:text-5xl lg:text-6xl">
+                <h1 className="mt-4 text-2xl font-semibold leading-[1.15] sm:mt-5 sm:text-4xl md:text-5xl lg:text-6xl">
                   {title}
                 </h1>
-                <p className="mt-5 max-w-2xl text-base leading-8 text-white/80 sm:text-lg">
+                <p className="mt-3 max-w-2xl text-sm leading-7 text-white/80 sm:mt-5 sm:text-base md:text-lg">
                   {description}
                 </p>
                 {actions?.length ? (
-                  <div className="mt-8 flex flex-col gap-4 sm:flex-row">
+                  <div className="mt-5 flex flex-col gap-3 sm:mt-8 sm:flex-row sm:gap-4">
                     {actions.map((action) => (
                       <Button
                         key={`${action.href}-${action.label}`}
@@ -72,20 +72,20 @@ export function PageHero({ eyebrow, title, description, actions, imageKey }: Pag
     );
   }
 
-  // Non-image fallback - add top padding to clear the fixed navbar
+  // Non-image fallback
   return (
     <section className="relative overflow-hidden bg-[radial-gradient(circle_at_top_left,rgba(215,38,56,0.12),transparent_24%),linear-gradient(135deg,#f5f8ff_0%,#ffffff_48%,#e9f0ff_100%)]">
-      <div className="shell section-gap relative pt-20">
+      <div className="shell section-gap relative pt-24">
         <div className="max-w-4xl">
           <span className="eyebrow">{eyebrow}</span>
-          <h1 className="mt-6 text-5xl font-semibold leading-tight sm:text-6xl">
+          <h1 className="mt-5 text-3xl font-semibold leading-tight sm:text-5xl lg:text-6xl">
             {title}
           </h1>
-          <p className="mt-6 max-w-3xl text-lg leading-8 text-muted-foreground sm:text-xl">
+          <p className="mt-5 max-w-3xl text-base leading-8 text-muted-foreground sm:text-xl">
             {description}
           </p>
           {actions?.length ? (
-            <div className="mt-8 flex flex-col gap-4 sm:flex-row">
+            <div className="mt-7 flex flex-col gap-3 sm:mt-8 sm:flex-row sm:gap-4">
               {actions.map((action) => (
                 <Button
                   key={`${action.href}-${action.label}`}

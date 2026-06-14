@@ -34,10 +34,10 @@ export function SiteFooter() {
 
   return (
     <footer className="bg-foreground text-white">
-      <div className="shell pt-16 pb-12">
-        <div className="grid gap-12 lg:grid-cols-[1.4fr_1fr_1fr_1fr]">
+      <div className="shell pt-10 pb-8 sm:pt-14 sm:pb-10 lg:pt-16 lg:pb-12">
+        <div className="grid gap-8 sm:grid-cols-2 sm:gap-10 lg:grid-cols-[1.4fr_1fr_1fr_1fr] lg:gap-12">
           {/* Brand column */}
-          <div>
+          <div className="sm:col-span-2 lg:col-span-1">
             <div className="flex items-center gap-3">
               <Image
                 src="/images/placeholders/logo.png"

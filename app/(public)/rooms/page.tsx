@@ -195,7 +195,7 @@ export default async function RoomsPage() {
             eyebrow="Room Previews"
             title="See inside before you arrive."
           />
-          <div className="mt-10 grid gap-4 md:grid-cols-3">
+          <div className="mt-10 grid gap-4 sm:grid-cols-2 md:grid-cols-3">
             {[
               {
                 src: "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=700&q=80",

@@ -96,7 +96,7 @@ export default async function ContactPage() {
       {/* Quick contact grid */}
       <section className="section-gap bg-white">
         <div className="shell">
-          <div className="grid gap-5 sm:grid-cols-2 xl:grid-cols-4">
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {quickContacts.map(({ icon: Icon, title, value, sub, href, actionLabel }) => (
               <div key={title} className="surface-card px-5 py-6">
                 <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-primary/10 text-primary">

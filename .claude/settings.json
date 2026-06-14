@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//c/Users/CyberFlacx/Desktop/starsuit lodge/components/layout/**)",
+      "Read(//c/Users/CyberFlacx/Desktop/starsuit lodge/components/sections/**)"
+    ]
+  }
+}

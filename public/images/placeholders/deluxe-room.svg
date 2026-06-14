@@ -1,0 +1,15 @@
+<svg width="1600" height="1000" viewBox="0 0 1600 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1600" height="1000" fill="#F7F2EA"/>
+  <rect x="74" y="84" width="1452" height="832" rx="46" fill="#FFFDFC"/>
+  <rect x="74" y="84" width="1452" height="180" rx="46" fill="#0B3D91"/>
+  <circle cx="145" cy="174" r="26" fill="#FFFFFF" fill-opacity="0.16"/>
+  <circle cx="223" cy="174" r="26" fill="#FFFFFF" fill-opacity="0.1"/>
+  <circle cx="301" cy="174" r="26" fill="#FFFFFF" fill-opacity="0.1"/>
+  <rect x="180" y="350" width="860" height="290" rx="40" fill="#E6EEF9"/>
+  <rect x="240" y="410" width="710" height="180" rx="30" fill="#B2C8EB"/>
+  <rect x="1060" y="336" width="300" height="338" rx="34" fill="#F8D8D6"/>
+  <rect x="1100" y="390" width="220" height="220" rx="24" fill="#D72638" fill-opacity="0.18"/>
+  <rect x="210" y="682" width="1150" height="68" rx="20" fill="#D4A373" fill-opacity="0.5"/>
+  <text x="180" y="205" fill="white" font-family="Arial, sans-serif" font-size="52" font-weight="700">Deluxe Room Placeholder</text>
+  <text x="180" y="250" fill="white" font-family="Arial, sans-serif" font-size="24">Use this until final room photography is available.</text>
+</svg>

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">Mutare branch placeholder</title>
+  <desc id="desc">Placeholder illustration for Starsuit Lodge Mutare.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0%" x2="100%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#0B3D91" />
+      <stop offset="100%" stop-color="#D72638" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#bg)" />
+  <rect x="130" y="160" width="940" height="480" rx="36" fill="rgba(255,255,255,0.12)" stroke="rgba(255,255,255,0.18)" />
+  <text x="160" y="270" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="34" letter-spacing="10">STARSUIT LODGES</text>
+  <text x="160" y="360" fill="#FFFFFF" font-family="Georgia, serif" font-size="74">Mutare Placeholder</text>
+  <text x="160" y="430" fill="#EAF1FF" font-family="Arial, sans-serif" font-size="28">Gallery seed image for Module 2</text>
+</svg>

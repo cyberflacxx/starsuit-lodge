@@ -1,0 +1,9 @@
+<svg width="1400" height="1000" viewBox="0 0 1400 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1400" height="1000" fill="#F8FAFD"/>
+  <rect x="92" y="104" width="1216" height="792" rx="40" fill="#FFFFFF"/>
+  <rect x="182" y="604" width="1036" height="168" rx="30" fill="#0B3D91"/>
+  <rect x="236" y="284" width="400" height="230" rx="28" fill="#DDE8F8"/>
+  <rect x="714" y="246" width="428" height="268" rx="28" fill="#F5D8D6"/>
+  <rect x="308" y="658" width="786" height="38" rx="18" fill="#FFFFFF" fill-opacity="0.2"/>
+  <text x="182" y="196" fill="#0B3D91" font-family="Arial, sans-serif" font-size="52" font-weight="700">Reception Desk Placeholder</text>
+</svg>

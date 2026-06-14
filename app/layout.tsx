@@ -39,10 +39,6 @@ export const metadata: Metadata = {
     title: "Starsuit Lodges",
     startupImage: "/icons/icon-512.png",
   },
-  icons: {
-    icon: "/app/icon.png",
-    apple: "/app/apple-icon.png",
-  },
   keywords: [
     "Starsuit Lodges",
     "Mutare lodge",

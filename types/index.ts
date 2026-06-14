@@ -18,13 +18,7 @@ export type RoomType = {
 };
 
 export type ServiceItem = {
-  title:
-    | "Comfortable Rooms"
-    | "Secure Parking"
-    | "Pickup Support"
-    | "Online Booking"
-    | "Guest Assistance"
-    | "Branch Choice";
+  title: string;
   description: string;
 };
 
